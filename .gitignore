@@ -1,6 +1,15 @@
+# virtualenv
 venv/
+
+# python
 __pycache__/
 *.pyc
+
+# macOS
 .DS_Store
-*.mp4
-frame_*.jpg
+
+# input videos and generated output (keep the folders, not the contents)
+data/*
+!data/.gitkeep
+output/*
+!output/.gitkeep
