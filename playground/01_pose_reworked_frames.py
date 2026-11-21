@@ -1,7 +1,7 @@
 import cv2
 from pathlib import Path
 
-cap = cv2.VideoCapture("file.mp4")
+cap = cv2.VideoCapture("data/file.mp4")
 
 
 #Error checker if file is not found / cannot be opened

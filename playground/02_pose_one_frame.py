@@ -5,7 +5,7 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 
 model_path = "models/pose_landmarker_full.task"
-image_path = "frame_0037.jpg"
+image_path = "data/frame_0037.jpg"
 
 frame = cv2.imread(image_path)
 
@@ -34,5 +34,5 @@ else:
         x, y = int(lm.x * w), int(lm.y * h)
         cv2.circle(frame, (x, y), 4, (0,255,0), -1)
     
-    cv2.imwrite("frame_0037_pose.jpg", frame)
+    cv2.imwrite("data/frame_0037_pose.jpg", frame)
     print("Saved frame_0037_pose.jpg")
