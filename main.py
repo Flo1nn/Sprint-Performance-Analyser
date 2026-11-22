@@ -6,9 +6,11 @@ Usage:
 
 import sys
 from pathlib import Path
+from sprint_analyzer.angles import calculate_angle
+
 
 from sprint_analyzer.config import DEFAULT_OUTPUT, DEFAULT_VIDEO
-from sprint_analyzer.draw import draw_skeleton
+from sprint_analyzer.draw import draw_skeleton, draw_angle
 from sprint_analyzer.pose import create_landmarker, detect_frame, to_pixels
 from sprint_analyzer.video import create_writer, open_video
 
@@ -35,9 +37,36 @@ def main():
         landmarks = detect_frame(landmarker, frame, timestamp_ms)
 
         if landmarks:
-            draw_skeleton(frame, to_pixels(landmarks, width, height))
+            points = to_pixels(landmarks, width, height)
+
+            draw_skeleton(frame , points)
+
+            left_knee_angle = calculate_angle(
+                points[23], #Left hip
+                points[25], #Left knee
+                points[27]  #Left ankle 
+            )
+
+            right_knee_angle = calculate_angle(
+                points[24], #Right hip
+                points[26], #Right knee
+                points[28]  #Right ankle
+            )
+
+            print(
+                f"Frame {frame_idx}: "
+                f"Left knee = {left_knee_angle},"
+                f"Right knee = {right_knee_angle}"
+            )
+
+            #Draw Knee Angles on the video
+            draw_angle(frame, left_knee_angle, points[25])
+            draw_angle(frame, right_knee_angle, points[26])
+        
         else:
             missed += 1
+        
+
 
         writer.write(frame)
         frame_idx += 1

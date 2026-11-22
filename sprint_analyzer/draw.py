@@ -31,3 +31,24 @@ def draw_skeleton(frame, points):
         cv2.circle(frame, point, 4, JOINT_COLOUR, -1)
 
     return frame
+
+#Function to display angles on video 
+def draw_angle(frame, angle, position):
+    """Draw a joint angle beside its landmark."""
+
+    if angle is None:
+        return frame
+    
+    x, y = position 
+
+    cv2.putText(
+        frame,
+        f"{angle:.1f} deg",
+        (x + 15, y - 15),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.7,
+        (0,255,255),
+        2
+    )
+
+    return frame 
