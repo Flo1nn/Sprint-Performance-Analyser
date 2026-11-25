@@ -1,4 +1,4 @@
-# Sprint Performance Analyzer
+# Sprint Performance Analyser
 
 A computer vision tool that analyses a sprinter's form from video using athlete tracking, pose estimation and joint angle calculations.
 
