@@ -57,7 +57,6 @@ data/                Input videos (gitignored)
 output/              Generated results (gitignored)
 models/              MediaPipe pose model
 playground/          Development and testing scripts
-assets/              Demonstration images
 requirements.txt     Project dependencies
 ```
 
