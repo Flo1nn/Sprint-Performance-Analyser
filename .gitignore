@@ -13,3 +13,6 @@ data/*
 !data/.gitkeep
 output/*
 !output/.gitkeep
+
+# YOLO model weights
+*.pt
