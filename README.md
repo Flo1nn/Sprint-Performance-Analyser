@@ -34,8 +34,8 @@ Version 1 completed.
 ## Setup
 
 ```bash
-git clone https://github.com/Flo1nn/Sprint-Performance-Analyzer.git
-cd Sprint-Performance-Analyzer
+git clone https://github.com/Flo1nn/Sprint-Performance-Analyser.git
+cd Sprint-Performance-Analyser
 
 python3 -m venv venv
 source venv/bin/activate
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ```text
 main.py              Main application
-sprint_analyzer/
+sprint_analyser/
     config.py        Paths and configuration
     video.py         Video processing
     pose.py          Landmark detection
