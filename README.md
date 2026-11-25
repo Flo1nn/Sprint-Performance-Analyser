@@ -2,10 +2,6 @@
 
 A computer vision tool that analyses a sprinter's form from video using athlete tracking, pose estimation and joint angle calculations.
 
-![Pose overlay on a sprint frame](assets/pose_overlay_demo.jpg)
-
-*33 body landmarks detected and connected into a skeleton overlay.*
-
 ## Why
 
 Sprinters often have to rely on their own judgement when analysing training and race performance when their coaches are unavailable.
