@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ```text
 main.py              Main application
-sprint_analyser/
+sprint_analyzer/
     config.py        Paths and configuration
     video.py         Video processing
     pose.py          Landmark detection
